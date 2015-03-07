@@ -15,7 +15,8 @@ class PostsController < ApplicationController
      if user_signed_in?
        @post = Post.new
      else
-       redirect_to user/sign_in
+       redirect_to "/users/sign_in"
+       flash[:notice] = "Please sign in first."
      end
   end
 
