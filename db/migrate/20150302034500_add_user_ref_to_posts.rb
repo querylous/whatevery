@@ -1,5 +1,5 @@
 class AddUserRefToPosts < ActiveRecord::Migration
   def change
-    add_column :posts, :user, :posts
+    add_reference :posts, :user 
   end
 end

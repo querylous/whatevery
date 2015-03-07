@@ -1,0 +1,28 @@
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th>Guests</th>
+      <th>Sponsor</th>
+      <th>Posted</th>
+      <th>File Link</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post.each do |post| %>
+     <tr>
+       <td><%= post.title %></td>
+       <td><%= post.notes %></td>
+       <td><%= post.guests %></td>
+       <td><%= post.sponsor %></td>
+       <td><%= post.posted %></td>
+       <td><%= post.file_link %></td>
+     </tr>
+    <% end %>
+  </tbody>
+
+</table>

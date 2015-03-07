@@ -1,0 +1,24 @@
+<h1>New Post</h1>
+
+<%= form_for(@post) do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+<p>
+   <%= f.label :notes %>
+   <%= f.text_field :notes %>
+<p>
+   <%= f.label :guests %>
+   <%= f.text_field :guests %>
+<p>   
+   <%= f.label :sponsor %>
+   <%= f.text_field :sponsor %>
+<p>
+   <%= f.label :file_link %>
+   <%= f.text_field :file_link %>
+<p>
+   <%= f.label :posted %>
+   <%= f.check_box :posted %>
+<p>
+   <%= f.label :notes %>
+   <%= f.submit "Create Post" %>
+<% end %> 
