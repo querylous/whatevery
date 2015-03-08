@@ -1,28 +1,23 @@
-<h1>Posts</h1>
+<h1>Whatevery</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Notes</th>
-      <th>Guests</th>
-      <th>Sponsor</th>
-      <th>Posted</th>
-      <th>File Link</th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @post.each do |post| %>
-     <tr>
-       <td><%= post.title %></td>
-       <td><%= post.notes %></td>
-       <td><%= post.guests %></td>
-       <td><%= post.sponsor %></td>
-       <td><%= post.posted %></td>
-       <td><%= post.file_link %></td>
-     </tr>
+     <tr class="title"><td><h3><%= post.title %></h3></td></tr>
+     <tr class="notes"><td><%= post.notes %></td></tr>
+     <tr class="guests"><td><%= post.guests %></td></tr>
+     <tr class="sponsor"><td><%= post.sponsor %></td></tr>
+     <% if user_signed_in? %> 
+       <tr><td></td></tr> 
+       <tr class="posted">
+         <td><b>Posted:&#32</b><%= post.posted %></td></tr>
+       <tr class="file_link">
+         <td><b>Link:&#32</b><%= post.file_link %></td></tr>
+       <tr class="posted_by">
+         <td><b>Posted By:&#32</b></td></tr>
+     <% end %>
+     <tr><td><p></td></tr>
+     <tr><td><p></td></tr>
     <% end %>
   </tbody>
-
 </table>
