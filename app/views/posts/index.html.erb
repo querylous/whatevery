@@ -3,10 +3,31 @@
 <table>
   <tbody>
     <% @post.each do |post| %>
-     <tr class="title"><td><h3><%= post.title %></h3></td></tr>
-     <tr class="notes"><td><%= post.notes %></td></tr>
-     <tr class="guests"><td><%= post.guests %></td></tr>
-     <tr class="sponsor"><td><%= post.sponsor %></td></tr>
+     <tr class="title"> 
+       <td><h2><%= post.title %></h2></td>
+     </tr>
+     <tr class="notes">
+       <td><%= post.notes %></td>
+     </tr>
+     <tr class="guests">
+     <% if post.guests == '' %>
+     <% else %>
+       <tr class="guests">
+         <td><h3>Joining us this week:</h3></td> 
+       </tr>
+       <tr class="guests"> 
+         <td><%= post.guests %></td>
+       </tr>
+     <% end %>
+     <% if post.sponsor == '' %>
+     <% else %>
+       <tr class="sponsor">
+         <td><h3>Brought to you by:</h3></td>
+       </tr> 
+       <tr class="sponsor">
+         <td><%= post.sponsor %></td>
+       </tr>
+     <% end %>
      <% if user_signed_in? %> 
        <tr><td></td></tr> 
        <tr class="posted">
