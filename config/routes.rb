@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/home'
+
+  get 'static_pages/subscribe'
+
+  get 'static_pages/sponsor'
+
+  get 'static_pages/about'
+
   devise_for :users 
 
   resources :posts

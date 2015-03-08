@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whatevery</title>
+  <title><%= yield(:title) %> | Whatevery </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,17 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+
+<nav class='main-nav'>
+  <ul>
+    <li>Home</li>
+    <li>Subscribe</li>
+    <li>Sponsor</li>
+    <li>About</li>
+  </ul>
+</nav>
+
+
 <%= yield %>
 
 </body>
