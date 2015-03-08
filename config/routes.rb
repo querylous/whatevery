@@ -1,19 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/home'
+  root 'posts#index'
 
-  get 'static_pages/subscribe'
-
-  get 'static_pages/sponsor'
-
-  get 'static_pages/about'
+  get 'home'      => 'posts#index'
+  get 'subscribe' => 'static_pages#subscribe'
+  get 'sponsor'   => 'static_pages#sponsor'
+  get 'about'     => 'static_pages#about'
 
   devise_for :users 
 
   resources :posts
 
-  root 'posts#index'
-
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
