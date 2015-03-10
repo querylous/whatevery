@@ -1,1 +1,42 @@
-<%= @posts.title %>   <%= @posts.posted %>
+<h1><%= link_to "Whatevery", root_path %></h1>
+
+<table>
+  <tbody>
+     <tr class="title"> 
+       <td><h2><%= @post.title %></h2></td>
+     </tr>
+     <tr class="notes">
+       <td><%= @post.notes %></td>
+     </tr>
+     <tr class="guests">
+     <% if @post.guests == '' %>
+     <% else %>
+       <tr class="guests">
+         <td><h3>Joining us this week:</h3></td> 
+       </tr>
+       <tr class="guests"> 
+         <td><%= @post.guests %></td>
+       </tr>
+     <% end %>
+     <% if @post.sponsor == '' %>
+     <% else %>
+       <tr class="sponsor">
+         <td><h3>Brought to you by:</h3></td>
+       </tr> 
+       <tr class="sponsor">
+         <td><%= @post.sponsor %></td>
+       </tr>
+     <% end %>
+     <% if user_signed_in? %> 
+       <tr><td></td></tr> 
+       <tr class="posted">
+         <td><b>Posted:&#32</b><%= @post.posted %></td></tr>
+       <tr class="file_link">
+         <td><b>Link:&#32</b><%= @post.file_link %></td></tr>
+       <tr class="posted_by">
+         <td><b>Posted By:&#32</b><%= @post.user %></td></tr>
+     <% end %>
+     <tr><td><p></td></tr>
+     <tr><td><p></td></tr>
+  </tbody>
+</table>
