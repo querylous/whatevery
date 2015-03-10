@@ -16,8 +16,11 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <%= render 'layouts/nav' %>
-    <%= yield %>
+    <div class="col-md-6">
+      <%= yield %>
+    </div>
+
+  <%= render 'layouts/nav' %>
   </div>
 </body>
 </html>
