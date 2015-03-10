@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'subscribe' => 'static_pages#subscribe'
   get 'sponsor'   => 'static_pages#sponsor'
   get 'about'     => 'static_pages#about'
-  
+  get 'newpost'   => 'posts#new'
 
   devise_scope :user do
     get 'signout'   => 'devise/sessions#destroy'
