@@ -17,59 +17,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 /* colors */
 
 $orange: #CC5200;
 $gray: #D8D8DC;
 
-a {
-color: $orange;
+body {
+  padding-top: 70px;
 }
 
-a:hover {
-background-color: $orange;
-color: #fff;
-padding: 5px 20px 5px 5px;
-}
-
-nav .nav-pills a:hover {
-  background-color: $orange;
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-a:hover {
-text-decoration: none;
-}
-
-nav ul {
-list-style-type: none;
-font-size: 1.5em;
-}
-
-/* positioning */
-
-nav {
-  padding-top: 10px;
-}
-
-/* tossing this out for now.
-
-.sidebar-nav-fixed {
-position: fixed;
-float: right;
-clear: left;
-right: 50px;
-padding-top: 20px;
-display: inline;
-}
-
-*/
