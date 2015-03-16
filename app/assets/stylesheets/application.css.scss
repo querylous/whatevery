@@ -38,8 +38,7 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-color: $gray;
-  margin-top: -20px;
+  background-color: $gray;  
 }
 
 
@@ -47,8 +46,8 @@ body {
   color: $orange;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 200;
-  font-size: 8em;
-  letter-spacing: 8px;
+  font-size: 5em;
+  margin-top: 20px;
 }
 
 /***** style navbar *****/
@@ -62,9 +61,7 @@ body {
 .nav-pills > li > a {
   color: $orange;
   font-family: 'Advent Pro', sans-serif;
-  font-size: 1.5em;
   font-weight: 600;
-  letter-spacing: 3px;
 }
 
 
@@ -84,3 +81,27 @@ body {
 .plmarg {
  margin-left: 20px;
 }
+
+/***** adds a top margin to static-pages *****/
+
+.sptmarg {
+  margin-top: 80px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .jumbotron h1, .jumbotron .h1 {
+    font-size: 7em; 
+    letter-spacing: 7px;
+  }
+   .nav-pills > li > a {
+   font-size: 1.5em; 
+   letter-spacing: 3px;
+  } 
+}
+
+/* Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md-min) { ... }
+*/
+/* Large devices (large desktops, 1200px and up) 
+@media (min-width: @screen-lg-min) { ... }
+*/
