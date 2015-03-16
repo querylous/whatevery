@@ -33,3 +33,54 @@ body {
   padding-top: 70px;
 }
 
+
+/***** style jumbotron *****/
+
+.jumbotron {
+  text-align: center;
+  background-color: $gray;
+  margin-top: -20px;
+}
+
+
+.jumbotron h1, .jumbotron .h1 {
+  color: $orange;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 200;
+  font-size: 8em;
+  letter-spacing: 8px;
+}
+
+/***** style navbar *****/
+
+.navbar-inverse {
+  background-color: $gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-pills > li > a {
+  color: $orange;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+
+/***** add some seperation in posts. *****/
+
+.postbreak {
+  height: 100px;
+}
+
+.postsep {
+  margin-top: 30px;
+}
+
+
+/***** adds a left margin to posts. *****/
+
+.plmarg {
+ margin-left: 20px;
+}
