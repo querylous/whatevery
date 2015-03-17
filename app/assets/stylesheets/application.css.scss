@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require mediaelement_rails
+ *= require mediaelement_rails/mejs-skins
  */
 
 @import "bootstrap-sprockets";
@@ -48,6 +50,13 @@ body {
   font-weight: 200;
   font-size: 5em;
   margin-top: 20px;
+}
+
+/***** center a column, mostly used for mejs header/player, not currrently in use. *****/
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }
 
 /***** style navbar *****/
@@ -87,6 +96,7 @@ body {
 .sptmarg {
   margin-top: 80px;
 }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .jumbotron h1, .jumbotron .h1 {

@@ -1,8 +1,12 @@
+<div class="container-fluid">
 <nav class="navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <audio controls>
-      <source src="http://whatevery.podbean.com/mf/web/8h564b/test_ep00.mp3" type="audio/mp3">
-    </audio>
+ <div class="row">
+   <div class="col-sm-12">
+     <audio class="mejs-wpc" controls>
+       <source src="http://whatevery.podbean.com/mf/web/8h564b/test_ep00.mp3" type="audio/mp3">
+     </audio>
+   </div>
+  </div>
     <ul class="nav nav-pills">
       <li><%= link_to "Home", root_path %><li>
       <li><%= link_to "Subscribe", subscribe_path %></li>
@@ -13,6 +17,5 @@
         <li><%= link_to "Sign Out", signout_path %></li>
       <% end %>
     </ul>
-  </div>
 </nav>
-
+</div>
