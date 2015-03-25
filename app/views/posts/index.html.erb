@@ -16,7 +16,7 @@
              <td><h2><%= post.title %></h2></td>
            </tr>
            <tr class="notes">
-             <td><%= post.notes %></td>
+             <td><%= markdown(post.notes) %></td>
            </tr>
            <tr class="guests">
            <% if post.guests == '' %>
