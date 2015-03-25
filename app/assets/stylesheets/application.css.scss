@@ -41,6 +41,7 @@ body {
 .jumbotron {
   text-align: center;
   background-color: $gray;  
+  margin-top: -50px;
 }
 
 
@@ -50,6 +51,10 @@ body {
   font-weight: 200;
   font-size: 5em;
   margin-top: 20px;
+}
+
+.jumbotron img {
+  width: 100%;
 }
 
 /***** center a column, mostly used for mejs header/player, not currrently in use. *****/
@@ -97,6 +102,12 @@ body {
   margin-top: 80px;
 }
 
+/***** remove bullets from alert messages *****/
+
+.msgs {
+  list-style: none;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .jumbotron h1, .jumbotron .h1 {
@@ -109,9 +120,25 @@ body {
   } 
 }
 
-/* Medium devices (desktops, 992px and up)
-@media (min-width: @screen-md-min) { ... }
-*/
-/* Large devices (large desktops, 1200px and up) 
-@media (min-width: @screen-lg-min) { ... }
-*/
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) { 
+  .jumbotron img {
+    width: 80%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+  .jumbotron img {
+    width: 70%;
+  } 
+}
+
+/* gigantor devices (desktops 1440 and up) */
+@media (min-width: 1440px) {
+  .jumbotron img {
+    width: 50%;
+  } 
+}
