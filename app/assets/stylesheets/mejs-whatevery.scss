@@ -1,0 +1,48 @@
+/**** themes the mediaelement player *****/
+
+$orange: #CC5200;
+$gray: #D8D8DC;
+$dgray: #B0B0B8;
+
+.mejs-container {
+  width: 100% !important;
+}
+
+.mejs-wpc .mejs-inner, .mejs-wpc .mejs-audio {
+  width: 100%;
+}
+
+.mejs-wpc .mejs-overlay, .mejs-wpc .mejs-poster {
+  width: 100% !important;
+}
+
+.mejs-wpc .mejs-mediaelement audio {
+  width: 100% !important
+}
+
+.mejs-wpc .mejs-controls {
+  background: $dgray;
+  height: 50px;
+  width: 100%;
+}
+
+.mejs-wpc .mejs-controls .mejs-time-rail {
+  padding: 0;
+  width: 100%;
+}
+
+.mejs-wpc .mejs-controls .mejs-time-rail span {
+  height: 100%;
+}
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-total,
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-buffering,
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-handle, {
+  background: $dgray;
+  margin: 0;
+  width: 100%;
+}
+
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-current {
+  background: $orange;
+} 
