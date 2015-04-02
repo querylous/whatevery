@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310023004) do
+ActiveRecord::Schema.define(version: 20150402061000) do
 
   create_table "posts", force: :cascade do |t|
-    t.string  "title"
-    t.text    "notes"
-    t.text    "sponsor"
-    t.boolean "posted"
-    t.text    "guests"
-    t.string  "file_link"
-    t.integer "user_id"
+    t.string   "title"
+    t.text     "notes"
+    t.text     "sponsor"
+    t.boolean  "posted"
+    t.text     "guests"
+    t.string   "file_link"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20150310023004) do
     t.string   "belongs_to_podcast"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "firstname"
+    t.string   "lastname"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
