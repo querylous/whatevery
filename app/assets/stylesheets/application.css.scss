@@ -108,6 +108,15 @@ body {
   list-style: none;
 }
 
+.editlink {
+  display: inline-block;
+}
+
+.editlink a {
+  color: $orange;
+  padding-left: 20px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .jumbotron h1, .jumbotron .h1 {
