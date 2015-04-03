@@ -32,8 +32,15 @@ $orange: #CC5200;
 $gray: #D8D8DC;
 $light-orange: #ffbd91;
 
-body {
-  padding-top: 70px;
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
 }
 
 a {
@@ -79,6 +86,7 @@ a.editlink:hover {
   text-align: center;
   background-color: $gray;  
   margin-top: -50px;
+  padding-top: 120px;
 }
 
 
@@ -137,13 +145,37 @@ a.editlink:hover {
 /***** adds a top margin to static-pages *****/
 
 .sptmarg {
-  margin-top: 80px;
+  margin-top: 140px;
 }
 
 /***** remove bullets from alert messages *****/
 
 .msgs {
   list-style: none;
+}
+
+/***** style footer *****/
+
+.footer {
+  bottom: 0;
+  height: 60px;
+}
+
+
+::-webkit-scrollbar
+{
+  width: 5px;  /* for vertical scrollbars */
+  height: 5px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Small devices (tablets, 768px and up) */

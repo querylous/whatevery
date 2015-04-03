@@ -12,22 +12,24 @@
   <%= render 'layouts/shim' %> 
 </head>
 <body>
+  <div id="wrap">
+    <%= render 'layouts/nav' %>
 
-  <%= render 'layouts/nav' %>
+    <div class="row">  
+      <% if notice %>
+        <p class="alert alert-success sptmarg"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
+   
+    <div class="sptmarg">
+     <%= yield %>
+    </div>
+  </div> 
 
-  <div class="row">  
-    <% if notice %>
-      <p class="alert alert-success sptmarg"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-  </div>
- 
-  <div class="sptmarg">
-   <%= yield %>
-  </div>
-  
+  <%= render 'layouts/footer' %>
 
   <script>
     $('audio,video').mediaelementplayer({
