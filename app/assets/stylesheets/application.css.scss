@@ -30,6 +30,7 @@
 
 $orange: #CC5200;
 $gray: #D8D8DC;
+$light-orange: #ffbd91;
 
 body {
   padding-top: 70px;
@@ -44,6 +45,12 @@ a:hover {
   color: #fff;
   background: $orange;
 } 
+
+a:active {
+  text-decoration: none;
+  color: #fff;
+  background: $light-orange;
+}
 
 /***** style the links on the title of each post *****/ 
 
@@ -99,13 +106,14 @@ a.editlink:hover {
 .navbar-inverse {
   background-color: $gray;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .nav-pills > li > a {
   color: $orange;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 600;
+  margin-top: 15px;
 }
 
 
