@@ -12,15 +12,17 @@
   <%= render 'layouts/shim' %> 
 </head>
 <body>
+
+  <%= render 'layouts/nav' %>
+
   <div class="row">  
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <p class="alert alert-success sptmarg"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
   </div>
-  <%= render 'layouts/nav' %>
  
   <div class="sptmarg">
    <%= yield %>

@@ -35,6 +35,36 @@ body {
   padding-top: 70px;
 }
 
+a {
+  color: $orange;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: $orange;
+} 
+
+/***** style the links on the title of each post *****/ 
+
+.titlelink {
+  display: inline-block;
+}
+
+.editlink {
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: 30px;
+}
+
+a.editlink {
+  color: $orange;
+}
+
+a.editlink:hover {
+  color: #fff;
+} 
+
 
 /***** style jumbotron *****/
 
@@ -106,15 +136,6 @@ body {
 
 .msgs {
   list-style: none;
-}
-
-.editlink {
-  display: inline-block;
-}
-
-.editlink a {
-  color: $orange;
-  padding-left: 20px;
 }
 
 /* Small devices (tablets, 768px and up) */
