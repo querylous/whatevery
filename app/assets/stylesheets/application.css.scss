@@ -45,6 +45,8 @@ html, body {
 
 a {
   color: $orange;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 600;
 }
 
 a:hover {
@@ -59,6 +61,10 @@ a:active {
   background: $light-orange;
 }
 
+h1 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 600;
+}
 /***** style the links on the title of each post *****/ 
 
 .titlelink {
