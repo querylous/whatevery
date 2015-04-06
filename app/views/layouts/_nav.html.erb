@@ -2,10 +2,7 @@
 <nav class="navbar-inverse navbar-fixed-top" role="navigation">
  <div class="row">
    <div class="col-sm-12">
-     <!-- <audio class="mejs-wpc col-centered" controls>
-       <source src="http://whatevery.podbean.com/mf/web/8h564b/test_ep00.mp3" type="audio/mp3">
-     </audio> --> 
-     <%= audio_tag("#{Post.first.file_link}", controls: true, class: "mejs-wpc col-centered") %> 
+     <%= audio_tag("#{current_ep.file_link}", controls: true, class: "mejs-wpc col-centered") %> 
    </div>
   </div>
     <ul class="nav nav-pills">

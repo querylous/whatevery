@@ -15,7 +15,7 @@
   <div id="wrap">
     <%= render 'layouts/nav' %>
 
-    <div class="row">  
+  <!--  <div class="row">  
       <% if notice %>
         <p class="alert alert-success sptmarg"><%= notice %></p>
       <% end %>
@@ -23,7 +23,19 @@
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
     </div>
-   
+  -->
+
+    <div class="row">
+      <div class="col-xs-12">
+        <% if notice %> 
+          <%= alert_box notice, dismissible: true, context: :success %> 
+        <% end %> 
+        <% if alert %> 
+          <%= alert_box alert, dismissible: true, context: :danger %> 
+        <% end %> 
+      </div>
+    </div> 
+ 
     <div class="sptmarg">
      <%= yield %>
     </div>
