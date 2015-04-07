@@ -65,6 +65,12 @@ html, body {
   height: 100%;
 }
 
+body p, li {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
 #wrap {
   min-height: 100%;
   height: auto;
