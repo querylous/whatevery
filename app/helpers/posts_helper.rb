@@ -3,7 +3,8 @@ module PostsHelper
     if Post.all.order("id asc").limit(20).where("file_link IS NOT NULL").first.nil?
       return "#"
     else
-      return Post.all.order("id asc").limit(20).where("file_link IS NOT NULL").first
+      x = Post.all.order("id asc").limit(20).where("file_link IS NOT NULL").first
+      return x.file_link
     end
   end
 end
