@@ -3,6 +3,7 @@
  <div class="row">
    <div class="col-sm-12">
      <% if current_ep.nil? %> 
+        <h3>New Episode coming soon!</h3>
      <% else %>
        <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
      <% end %>
