@@ -2,7 +2,7 @@
 <nav class="navbar-inverse navbar-fixed-top" role="navigation">
  <div class="row">
    <div class="col-sm-12">
-     <% if current_ep.nil? %> 
+     <% if current_ep == "" %> 
         <h3>New Episode coming soon!</h3>
      <% else %>
        <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
