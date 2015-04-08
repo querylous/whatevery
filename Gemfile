@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.0'
-gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -24,6 +24,12 @@ gem 'bh', '~> 1.2'
 
 
 gem 'rails_12factor', group: :production
+
+
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
 
 
 # Use ActiveModel has_secure_password
