@@ -11,10 +11,7 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgresql
-  host: localhost
-  username: charles
-  database: app-dev
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,11 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql
+  adapter: postgresql
   encoding: utf8
-  reconnect: false
-  database: railswpcs 
+  database: project_production
   pool: 5
-  username: charles1024 
-  password: zlogGlbz7BGv
-  host: mysql.whatevery.co

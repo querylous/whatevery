@@ -28,6 +28,7 @@ gem 'rails_12factor', group: :production
 
 group :production do
   gem 'thin'
+  gem 'pg'
 end
 
 
