@@ -46,3 +46,12 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-current {
   background: $orange;
 } 
+
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-float {
+  margin-top: 25px;
+  font-size: 1.5em;
+  color: #cc5200;
+  padding-top: 18px;
+  width: 45px;
+  border: none;
+}
