@@ -1,23 +1,23 @@
-<div class="container-fluid">
-<nav class="navbar-inverse navbar-fixed-top" role="navigation">
- <div class="row">
-   <div class="col-sm-12">
-     <% if current_ep == "" %> 
-        <h3>New Episode coming soon!</h3>
-     <% else %>
-       <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
-     <% end %>
-   </div>
-  </div>
-    <ul class="nav nav-pills">
-      <li><%= link_to "Home", root_path %><li>
-      <li><%= link_to "Subscribe", subscribe_path %></li>
-      <li><%= link_to "Sponsor", sponsor_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to "New Post", newpost_path %></li>
-        <li><%= link_to "Sign Out", signout_path %></li>
-      <% end %>
-    </ul>
-</nav>
+<div class="container">
+  <nav class="navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="row">
+     <div class="col-sm-12">
+       <% if current_ep == "" %> 
+          <h3>New Episode coming soon!</h3>
+       <% else %>
+         <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
+       <% end %>
+     </div>
+    </div>
+      <ul class="nav nav-pills">
+        <li><%= link_to "Home", root_path %><li>
+        <li><%= link_to "Subscribe", subscribe_path %></li>
+        <li><%= link_to "Sponsor", sponsor_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "New Post", newpost_path %></li>
+          <li><%= link_to "Sign Out", signout_path %></li>
+        <% end %>
+      </ul>
+  </nav>
 </div>
