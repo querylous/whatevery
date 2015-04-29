@@ -26,9 +26,21 @@ $dgray: #B0B0B8;
   width: 100%;
 }
 
+.mejs-wpc .mejs-controls .mejs-button {
+  outline: none;
+  margin: 10px 15px;
+}
+
+.mejs-wpc .mejs-controls .mejs-time {
+  padding: 18px 0px 0 3px;
+  font-size: 15px;
+}
+
 .mejs-wpc .mejs-controls .mejs-time-rail {
   padding: 0;
+  padding-left: 10px;
   width: 100%;
+  padding-right: 20px;
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail span {
@@ -39,12 +51,14 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-buffering,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-handle, {
   background: $dgray;
+  width: 60px;
   margin: 0;
   width: 100%;
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-current {
   background: $orange;
+  opacity: 0.9;
 } 
 
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-float {
@@ -54,4 +68,19 @@ $dgray: #B0B0B8;
   padding-top: 18px;
   width: 45px;
   border: none;
+  background: none;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, 
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  top: 15px;
+  height: 18px;
+  border-radius: 0;
+}
+
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: $orange;
+  opacity: 0.9;
 }
