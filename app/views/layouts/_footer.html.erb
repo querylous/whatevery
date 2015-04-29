@@ -1,6 +1,14 @@
 <div class="footer">
   <div class="container"> 
-    <p class="text-muted">Site by <%= link_to 'Charles Smith', "http://www.twitter.com/charlesesmith" %></p>
+    <p class="text-muted"><%= modal title: 'Site by Charles Smith', button: {size: :sm} do %></p>
+      <div class="modal-body">
+        <p>If you need a website or want to tell me what I did wrong: </p>
+        <p>Find me on Twitter: <%= link_to '@charlesesmith', "http://twitter.com/charlesesmith" %></p>
+        <p>Or email direct: <%= link_to 'eddie@whatevery.co', "mailto:eddie@whatevery.co" %></p>
+        <p class="sptmarg"></p>
+        <p class="text-muted">This site built with Ruby on Rails v4 and Bootstrap. Hosted on Heroku.</p>
+      </div>
+    <% end %>
   </div>  
 </div>
 
