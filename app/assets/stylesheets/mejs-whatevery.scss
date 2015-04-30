@@ -18,7 +18,7 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-controls {
-  background: $gray;
+  background: #000;
   height: 50px;
   
 }
@@ -38,7 +38,7 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-controls .mejs-volume-button button {
-  background: url(mejs_wpc_controls.png) no-repeat -65px 0px ; 
+  background: url(mejs_wpc_controls_bl.png) no-repeat -65px 0px ; 
   width: 30px;
   height: 35px;
 }
@@ -53,7 +53,7 @@ $dgray: #B0B0B8;
 
 
 .mejs-wpc .mejs-controls .mejs-unmute button {
-  background: url(mejs_wpc_controls.png) no-repeat -99px 0px ; 
+  background: url(mejs_wpc_controls_bl.png) no-repeat -99px 0px ; 
   width: 30px;
   height: 40px;
 }
@@ -87,7 +87,7 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-loaded,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-buffering,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-handle, {
-  background: $dgray;
+  background: #000;
   margin: 0;
 }
 
@@ -122,6 +122,9 @@ $dgray: #B0B0B8;
   top: 18px;
   height: 18px;
   border-radius: 0;
+}
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  background: $gray;
 }
 
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
