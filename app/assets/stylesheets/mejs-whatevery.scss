@@ -9,21 +9,17 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-inner, .mejs-wpc .mejs-audio {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-overlay, .mejs-wpc .mejs-poster {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-mediaelement audio {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-controls {
   background: $gray;
   height: 50px;
-  width: 100%;
   
 }
 
@@ -67,8 +63,9 @@ $dgray: #B0B0B8;
 }**/
 
 .mejs-wpc .mejs-controls .mejs-time {
-  padding: 18px 0px 0 3px;
-  margin-left: -120px;
+  padding-top: 18px;
+  display: inline-block;
+/**  margin-left: -120px; **/
 }
 
 .mejs-wpc .mejs-controls .mejs-time span {
@@ -79,8 +76,8 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail {
   padding: 0;
   padding-left: 10px;
-  width: 100%;
-  padding-right: 120px;
+  padding-right: 10px;
+/**  padding-right: 120px; **/
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail span {
@@ -91,9 +88,7 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-buffering,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-handle, {
   background: $dgray;
-  width: 60px;
   margin: 0;
-  width: 100%;
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-current {
@@ -113,9 +108,13 @@ $dgray: #B0B0B8;
   color: #fff;
 }
 
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  border: 0;
+}
 
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider {
   width: 40px;
+  margin-right: 20px;
 }
 
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, 
