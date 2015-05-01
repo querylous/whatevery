@@ -28,7 +28,7 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-controls .mejs-playpause-button button {
-  background: url(mejs_wpc_controls_bl.png) no-repeat 0 0;
+  background: image-url("mejs_wpc_controls_bl.png") no-repeat 0 0;
   height: 40px;
   width: 35px;
 }
@@ -38,7 +38,7 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-controls .mejs-volume-button button {
-  background: url(mejs_wpc_controls_bl.png) no-repeat -65px 0px ; 
+  background: image-url("mejs_wpc_controls_bl.png") no-repeat -65px 0px ; 
   width: 30px;
   height: 35px;
 }
@@ -53,7 +53,7 @@ $dgray: #B0B0B8;
 
 
 .mejs-wpc .mejs-controls .mejs-unmute button {
-  background: url(mejs_wpc_controls_bl.png) no-repeat -99px 0px ; 
+  background: image-url("mejs_wpc_controls_bl.png") no-repeat -99px 0px ; 
   width: 30px;
   height: 40px;
 }
