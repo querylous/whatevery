@@ -135,8 +135,6 @@ a.editlink:hover {
 .jumbotron {
   text-align: center;
   background-color: $gray;  
-  margin-top: -50px;
-  padding-top: 120px;
   width: auto;
 }
 
@@ -154,7 +152,6 @@ a.editlink:hover {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 200;
   font-size: 5em;
-  margin-top: 20px;
 }
 
 .jumbotron img {
@@ -180,17 +177,28 @@ a.editlink:hover {
 
 .navbar-inverse {
   background-color: $gray;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  border: none;
+  margin-top: 50px;
+  padding: 10px 0;
+}
+ 
+.navbar-inverse .navbar-nav > li > a {
+  color: $orange;
 }
 
+.navbar-inverse img {
+  margin-top: -8px;
+  padding-bottom: 0px;
+}
 .nav-pills > li > a {
   color: $orange;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 600;
-  margin-top: 15px;
 }
 
+.audio-player {
+  margin: 20px 0 0 0;
+}
 
 /***** add some seperation in posts. *****/
 

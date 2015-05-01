@@ -9,38 +9,75 @@ $dgray: #B0B0B8;
 }
 
 .mejs-wpc .mejs-inner, .mejs-wpc .mejs-audio {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-overlay, .mejs-wpc .mejs-poster {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-mediaelement audio {
-  width: 100%;
 }
 
 .mejs-wpc .mejs-controls {
-  background: $dgray;
+  background: #000;
   height: 50px;
-  width: 100%;
+  
 }
 
-.mejs-wpc .mejs-controls .mejs-button {
-  outline: none;
-  margin: 10px 15px;
+.mejs-wpc .mejs-controls .mejs-playpause-button {
+  margin: 0 15px;
 }
+
+.mejs-wpc .mejs-controls .mejs-playpause-button button {
+  background: url(mejs_wpc_controls.png) no-repeat 0 0;
+  height: 40px;
+  width: 35px;
+}
+
+.mejs-wpc .mejs-controls .mejs-pause button {
+  background-position: -30px;
+}
+
+.mejs-wpc .mejs-controls .mejs-volume-button button {
+  background: url(mejs_wpc_controls_bl.png) no-repeat -65px 0px ; 
+  width: 30px;
+  height: 35px;
+}
+
+.mejs-wpc .mejs-controls .mejs-mute {
+  margin: 0 7px;
+}
+
+.mejs-wpc .mejs-controls .mejs-unmute {
+  margin: 0 7px;
+}
+
+
+.mejs-wpc .mejs-controls .mejs-unmute button {
+  background: url(mejs_wpc_controls_bl.png) no-repeat -99px 0px ; 
+  width: 30px;
+  height: 40px;
+}
+
+/**.mejs-wpc .mejs-controls .mejs-button {
+  margin: 0px 15px;
+}**/
 
 .mejs-wpc .mejs-controls .mejs-time {
-  padding: 18px 0px 0 3px;
-  font-size: 15px;
+  padding-top: 18px;
+  display: inline-block;
+/**  margin-left: -120px; **/
+}
+
+.mejs-wpc .mejs-controls .mejs-time span {
+  font-size: 12px;
+  color: $orange;
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail {
   padding: 0;
   padding-left: 10px;
-  width: 100%;
-  padding-right: 20px;
+  padding-right: 10px;
+/**  padding-right: 120px; **/
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail span {
@@ -50,10 +87,8 @@ $dgray: #B0B0B8;
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-loaded,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-buffering,
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-handle, {
-  background: $dgray;
-  width: 60px;
+  background: #000;
   margin: 0;
-  width: 100%;
 }
 
 .mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-current {
@@ -73,11 +108,23 @@ $dgray: #B0B0B8;
   color: #fff;
 }
 
+.mejs-wpc .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  border: 0;
+}
+
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider {
+  width: 40px;
+  margin-right: 20px;
+}
+
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, 
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-  top: 15px;
+  top: 18px;
   height: 18px;
   border-radius: 0;
+}
+.mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  background: $gray;
 }
 
 .mejs-wpc .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {

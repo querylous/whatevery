@@ -1,16 +1,29 @@
-<div class="container">
-  <nav class="navbar-inverse navbar-fixed-top" role="navigation">
-   <div class="row">
-     <div class="col-sm-12">
+    <%= navbar position: :top, inverted: true do %>
+      <%= vertical do %>
+        <%= link_to(image_tag("wp_logo3.png", :size => "100x35", :border => 0), root_path) %>
+      <% end %>
+      <%= horizontal do %>
+        <%= nav class: "navbar-right" do %>
+          <%= link_to "Subscribe", subscribe_path %>
+          <%= link_to "Sponsor", sponsor_path %>
+          <%= link_to "About", about_path %>
+          <% if user_signed_in? %>
+            <%= link_to "New Post", newpost_path %>
+            <%= link_to "Sign Out", signout_path %>
+          <% end %>
+        <% end %>
+     <% end %>
+   <% end %>
+   <div class="audio-player row navbar-fixed-top">
        <% if current_ep == "" %> 
           <h3>New Episode coming soon!</h3>
        <% else %>
          <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
        <% end %>
-     </div>
     </div>
-      <ul class="nav nav-pills">
-        <li><%= link_to "Home", root_path %><li>
+
+<!--      <ul class="nav nav-pills"> 
+        <li><%= link_to(image_tag("wp_logo3.png", :size => "100x35", :border => 0), root_path) %></li>
         <li><%= link_to "Subscribe", subscribe_path %></li>
         <li><%= link_to "Sponsor", sponsor_path %></li>
         <li><%= link_to "About", about_path %></li>
@@ -20,4 +33,4 @@
         <% end %>
       </ul>
   </nav>
-</div>
+-->
