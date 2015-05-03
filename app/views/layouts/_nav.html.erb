@@ -18,7 +18,7 @@
        <% if current_ep == "" %> 
           <h3>New Episode coming soon!</h3>
        <% else %>
-         <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered") %> 
+         <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered", id: "stickyPlayer") %> 
        <% end %>
     </div>
 
