@@ -34,6 +34,8 @@
                <td><%= markdown(@post.sponsor) %></td>
              </tr>
            <% end %>
+           <tr class="file_link">
+             <td><%= link_to "Download", @post.file_link %></td></tr>
            <% if user_signed_in? %> 
              <tr><td></td></tr> 
              <tr class="posted">
