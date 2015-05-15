@@ -104,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .titlelink {
   display: inline-block;
+  line-height: 2em;
 }
 
 .editlink {
@@ -118,7 +119,6 @@ a.editlink {
 a.editlink:hover {
   color: #fff;
 } 
-
 
 .alert {
   z-index: 2;
@@ -198,6 +198,26 @@ a.editlink:hover {
 
 .audio-player {
   margin: 20px 0 0 0;
+}
+
+.play-button {
+  background: image-url("mejs_wpc_controls.png") no-repeat 2px 1px;
+  height: 40px;
+  width: 35px; 
+  border: none;
+  margin-top: 10px;
+}
+
+.post-play-button {
+  display: inline-block;
+}
+
+.file_link {
+  display: inline;
+  clear: left;
+  position: relative;
+  top: -10px;  
+  font-size: 1.3em;
 }
 
 /***** add some seperation in posts. *****/
