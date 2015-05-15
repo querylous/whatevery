@@ -1,0 +1,12 @@
+// get the file link from a selected ep
+$(".play-button").click(function(){
+  var playerLink = $(this).attr("name");
+// update the player 
+  $("#stickyPlayer").attr("src", playerLink);
+//play the ep after the user clicks the post play button
+  $("button[title|='Play/Pause']").click();
+});
+
+// show a dropdown of what is playing.
+
+

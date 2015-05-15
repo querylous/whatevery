@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="jumbotron">
+      <h1>whatevery</h1>
+      <p>A podcast for your nerdy addictions.</p> 
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 plmarg">
+      <table>
+        <tbody>
+          <% @post.each do |post| %>
+           <tr class="header-title"> 
+             <td></button><h2 class="titlelink"><%= link_to "#{post.title}", post %></h2>
+               <% if user_signed_in? %> 
+                  <p class="editlink"><%= link_to 'Edit Post', edit_post_path(post) %></p>
+                  <p class="editlink"><%= link_to 'Delete Post', post, method: :delete, 
+                                                                       data: { :confirm => 'Are you sure you want to delete the post?' } %></p>
+               <% end %>
+             </td>
+           </tr>
+           <tr class="notes">
+             <td><%= markdown(post.notes) %></td>
+           </tr>
+           <tr class="guests">
+           <% if post.guests == '' %>
+           <% else %>
+             <tr class="guests">
+               <td><h4 class="postsep">Joining us this week:</h4></td> 
+             </tr>
+             <tr class="guests"> 
+               <td><%= markdown(post.guests) %></td>
+             </tr>
+           <% end %>
+           <% if post.sponsor == '' %>
+           <% else %>
+             <tr class="sponsor">
+               <td><h4 class="postsep">Brought to you by:</h4></td>
+             </tr> 
+             <tr class="sponsor">
+               <td><%= markdown(post.sponsor) %></td>
+             </tr>
+           <% end %>
+           <tr class="file_link">
+             <td><button class="play-button"></button> or <%= link_to "Download", post.file_link %></td></tr>
+           <% if user_signed_in? %> 
+             <tr><td></td></tr> 
+             <tr class="posted">
+               <td><b>Posted:&#32</b><%= post.posted %></td></tr>
+             <tr class="file_link">
+               <td><b>Link:&#32</b><%= link_to "#{post.file_link}", post.file_link %></td></tr>
+             <tr class="posted_by">
+               <td><b>Posted By:&#32</b><%= post.user.firstname %></td></tr>
+           <% end %>
+           <tr class="postbreak"><td><p></td></tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
