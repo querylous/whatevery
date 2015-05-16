@@ -1,36 +1,26 @@
-    <%= navbar position: :top, inverted: true do %>
-      <%= vertical do %>
-        <%= link_to(image_tag("wp_logo3.png", :size => "100x35", :border => 0), root_path) %>
+<div id="audio-player-title" class="navbar-fixed-top"><h2 id="stickyPlayerCurrentEp">Episode 3 - I'm not wearing tights for dicks</h2></div>
+<%= navbar position: :top, inverted: true do %>
+  <%= vertical do %>
+    <%= link_to(image_tag("wp_logo3.png", :size => "100x35", :border => 0), root_path) %>
+  <% end %>
+  <%= horizontal do %>
+    <%= nav class: "navbar-right" do %>
+      <%= link_to "Subscribe", subscribe_path %>
+      <%= link_to "Sponsor", sponsor_path %>
+      <%= link_to "About", about_path %>
+      <% if user_signed_in? %>
+        <%= link_to "New Post", newpost_path %>
+        <%= link_to "Sign Out", signout_path %>
       <% end %>
-      <%= horizontal do %>
-        <%= nav class: "navbar-right" do %>
-          <%= link_to "Subscribe", subscribe_path %>
-          <%= link_to "Sponsor", sponsor_path %>
-          <%= link_to "About", about_path %>
-          <% if user_signed_in? %>
-            <%= link_to "New Post", newpost_path %>
-            <%= link_to "Sign Out", signout_path %>
-          <% end %>
-        <% end %>
-     <% end %>
+    <% end %>
+ <% end %>
+<% end %>
+<div class="audio-player row navbar-fixed-top">
+   <% if current_ep == "" %> 
+      <h3>New Episode coming soon!</h3>
+   <% else %>
+     <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered", id: "stickyPlayer") %> 
    <% end %>
-   <div class="audio-player row navbar-fixed-top">
-       <% if current_ep == "" %> 
-          <h3>New Episode coming soon!</h3>
-       <% else %>
-         <%= audio_tag("#{current_ep}", controls: true, class: "mejs-wpc col-centered", id: "stickyPlayer") %> 
-       <% end %>
-    </div>
+</div>
 
-<!--      <ul class="nav nav-pills"> 
-        <li><%= link_to(image_tag("wp_logo3.png", :size => "100x35", :border => 0), root_path) %></li>
-        <li><%= link_to "Subscribe", subscribe_path %></li>
-        <li><%= link_to "Sponsor", sponsor_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to "New Post", newpost_path %></li>
-          <li><%= link_to "Sign Out", signout_path %></li>
-        <% end %>
-      </ul>
-  </nav>
--->
+

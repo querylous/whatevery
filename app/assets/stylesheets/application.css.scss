@@ -199,6 +199,21 @@ a.editlink:hover {
   margin: 20px 0 0 0;
 }
 
+#audio-player-title {
+  width: 100%;
+  color: $orange;
+  z-index: 2000;
+  display: none;
+}
+
+#audio-player-title h2 {
+  margin: 0px 0 7px 0; 
+  text-align: center;
+  width: 100%;
+  padding: 7px 0 10px 0;
+  background: rgba(0,0,0,0.7);
+}
+
 .play-button {
   background: image-url("mejs_wpc_controls.png") no-repeat 2px 1px;
   height: 40px;
