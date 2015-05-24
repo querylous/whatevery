@@ -32,7 +32,7 @@
            <%= markdown(@post.sponsor) %>
          </p>
        <% end %>
-       <div class="post-play-button"><button class="play-button" name="<%= "#{@post.file_link}" %>" ></button></div>
+       <div class="post-play-button"><button class="play-button" name="<%= "#{@post.file_link}" %>" value="<%= "#{@post.title}"%>"></button></div>
          <div class="file_link"> or <%= link_to "Download", @post.file_link %></div>
        <% if user_signed_in? %> 
          </p> 
