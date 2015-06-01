@@ -49,8 +49,12 @@
          <p class="posted_by">
            <b>Posted By:&#32</b><%= post.user.firstname %></p>
        <% end %>
-       <p class="postbreak"><p></p>
+      <p class="postbreak"><p></p>
       <% end %>
+       <ul class="pagination">
+         <%= will_paginate @post %> 
+       </ul>
+ 
     </div>
   </div>
 </div>
