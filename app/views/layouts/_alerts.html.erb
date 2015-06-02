@@ -1,0 +1,16 @@
+<% if notice %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= alert_box notice, dismissible: true, context: :success %> 
+    </div>
+  </div>
+<% end %> 
+<% if alert %> 
+  <div class="row">
+    <div class="col-xs-12">
+      <%= alert_box alert, dismissible: true, context: :danger %> 
+    </div>
+  </div>
+<% end %>
+
+
