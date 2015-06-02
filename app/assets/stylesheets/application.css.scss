@@ -128,15 +128,15 @@ a.editlink:hover {
 } 
 
 .alert {
-  z-index: 2;
   margin: auto;
   left: 5%;
   right: 5%;
   width: 80%;
-  top: 120px;
-  position: absolute;
 }
 
+.alert:first-child {
+  margin-top: 70px;
+}
 /***** style jumbotron *****/
 
 .jumbotron {

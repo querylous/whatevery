@@ -1,1 +1,3 @@
-This is a simple podcast app to help post and deliver new episodes of the Whatever.co podcast.
+This is a podcast app for Whatevery.co.
+
+Right now, serves as a front end for The Whatevery Show, while podbean hosts RSS and files.
