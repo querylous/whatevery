@@ -203,6 +203,9 @@ a.editlink:hover {
   font-weight: 600;
 }
 
+
+/**** style audio player *****/
+
 .audio-player {
   margin: 20px 0 0 0;
 }
@@ -278,7 +281,19 @@ a.editlink:hover {
   height: 60px;
 }
 
+/***** style share links *****/
 
+.share img {
+  height: 20px;
+  width: 20px;
+}
+
+.share img:hover {
+  background-color: $orange;
+  padding: 2px 2px;
+}
+
+/***** style scroll bars *****/
 ::-webkit-scrollbar
 {
   width: 5px;  /* for vertical scrollbars */

@@ -1,49 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-10 plmarg postsep">
-       <p class="header-title"> 
-         <h2 class="titlelink"><%= link_to "#{@post.title}", @post %></h2>
-           <% if user_signed_in? %> 
-              <p class="editlink"><%= link_to 'Edit Post', edit_post_path(@post) %></p>
-              <p class="editlink"><%= link_to 'Delete Post', @post, method: :delete, 
-                                                                   data: { :confirm => 'Are you sure you want to delete the post?' } %></p>
-           <% end %>
-         
-       </p>
-       <p class="notes">
-         <%= markdown(@post.notes) %>
-       </p>
-       <p class="guests">
-       <% if @post.guests == '' %>
-       <% else %>
-         <p class="guests">
-           <h4 class="postsep">Joining us this week:</h4> 
-         </p>
-         <p class="guests"> 
-           <%= markdown(@post.guests) %>
-         </p>
-       <% end %>
-       <% if @post.sponsor == '' %>
-       <% else %>
-         <p class="sponsor">
-           <h4 class="postsep">Brought to you by:</h4>
-         </p> 
-         <p class="sponsor">
-           <%= markdown(@post.sponsor) %>
-         </p>
-       <% end %>
-       <div class="post-play-button"><button class="play-button" name="<%= "#{@post.file_link}" %>" value="<%= "#{@post.title}"%>"></button></div>
-         <div class="file_link"> or <%= link_to "Download", @post.file_link %></div>
-       <% if user_signed_in? %> 
-         </p> 
-         <p class="posted">
-           <b>Posted:&#32</b><%= @post.posted %></p>
-         <p class="file_link">
-           <b>Link:&#32</b><%= link_to "#{@post.file_link}", @post.file_link %></p>
-         <p class="posted_by">
-           <b>Posted By:&#32</b><%= @post.user.firstname %></p>
-       <% end %>
-       <p class="postbreak"><p></p>    
-    </div>
+    <div class="plmarg postsep">
+    <%= render partial: 'posts/postview', locals: { post: @post } %>
+    </div.
   </div>
 </div>
