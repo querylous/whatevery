@@ -1,0 +1,1 @@
+$(".row .alert").click(function(){$(this).fadeOut("slow")});

@@ -1,0 +1,1 @@
+$(".play-button").click(function(){var t=$(this).attr("name"),e=$(this).attr("value");console.log(e),$("#stickyPlayer").attr("src",t),$("button[title|='Play/Pause']").click(),$("h2[id='stickyPlayerCurrentEp']").text(e),$("#audio-player-title").slideDown(500).delay(2e3).slideUp(500)});
