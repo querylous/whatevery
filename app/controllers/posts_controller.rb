@@ -3,8 +3,12 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 20)
-    respond_with(@posts)
+    if user_signed_in?
+      @posts = Post.paginate(:page => params[:page], :per_page => 20)
+      respond_with(@posts)
+    else
+      @posts = Post.paginate(:page => params[:page], :per_page => 20).where(posted: true)
+    end
   end
   
   def show
