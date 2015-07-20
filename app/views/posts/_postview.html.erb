@@ -28,10 +28,12 @@
     <%= markdown(post.sponsor) %>
   </p>
 <% end %>
-<div class="post-play-button">
-  <button class="play-button" name="<%= "#{post.file_link}" %>" value="<%= "#{post.title}"%> "></button>
-</div>
-<div class="file_link"> or <%= link_to "Download", post.file_link, alt: "#{post.title}" %></div>
+<% if post.file_link? %>
+  <div class="post-play-button">
+    <button class="play-button" name="<%= "#{post.file_link}" %>" value="<%= "#{post.title}"%> "></button>
+  </div>
+  <div class="file_link"> or <%= link_to "Download", post.file_link, alt: "#{post.title}" %></div>
+<% end %> 
 <p class="share">
   <%= render partial: "posts/share", locals: { post: post } %>
 </p>
