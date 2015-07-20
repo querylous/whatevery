@@ -4,7 +4,7 @@ $(".play-button").click(function(){
   var playerTitle = $(this).attr("value");
   console.log(playerTitle);
 // update the player 
-  $("#stickyPlayer").attr("src", playerLink);
+  $("#stickyPlayer").attr("src", playerLink).delay( 500 );
 //play the ep after the user clicks the post play button
   $("button[title|='Play/Pause']").click();
 // set the title text of the stickyPlayer title
