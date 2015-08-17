@@ -19,6 +19,7 @@ gem 'redcarpet'
 gem 'bh', '~> 1.2'
 gem 'will_paginate', '~> 3.0.6'
 gem 'rails_12factor', group: :production
+gem 'figaro'
 
 group :production do
   gem 'thin'
