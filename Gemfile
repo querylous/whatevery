@@ -19,6 +19,10 @@ gem 'redcarpet'
 gem 'bh', '~> 1.2'
 gem 'will_paginate', '~> 3.0.6'
 gem 'rails_12factor', group: :production
+<<<<<<< HEAD
+=======
+gem 'figaro'
+>>>>>>> adding_twitter
 gem 'twitter'
 
 group :production do
