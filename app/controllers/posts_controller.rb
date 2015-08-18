@@ -24,6 +24,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     @post.save
+    if params[:tweet_this] = true 
+      $twitter.update(params[:tweet_msg] + " " + 
+                      "http://whatevery.co/posts/#{@post.id}")
+    end
     respond_with(@post)
   end
 
