@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  get 'home'      => 'posts#index'
-  get 'subscribe' => 'static_pages#subscribe'
-  get 'sponsor'   => 'static_pages#sponsor'
-  get 'about'     => 'static_pages#about'
-  get 'newpost'   => 'posts#new'
+  get 'home'         => 'posts#index'
+  get 'subscribe'    => 'static_pages#subscribe'
+  get 'sponsor'      => 'static_pages#sponsor'
+  get 'about'        => 'static_pages#about'
+  get 'newpost'      => 'posts#new'
+  get '/posts/*path' => 'posts#show', as: :posts
 
   devise_scope :user do
     get 'signout'   => 'devise/sessions#destroy'

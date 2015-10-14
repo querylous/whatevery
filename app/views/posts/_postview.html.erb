@@ -1,5 +1,5 @@
 <p class="header-title"> 
-  <h2 class="titlelink"><%= link_to "#{post.title}", post %></h2>
+  <h2 class="titlelink"><%= link_to "#{post.title}", show_post_path(post) %></h2>
     <% if user_signed_in? %> 
       <p class="editlink"><%= link_to 'Edit Post', edit_post_path(post) %></p>
       <p class="editlink"><%= link_to 'Delete Post', post, method: :delete, 

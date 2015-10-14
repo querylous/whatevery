@@ -21,6 +21,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'rails_12factor', group: :production
 gem 'figaro'
 gem 'twitter'
+gem 'slugalicious'
 
 group :production do
   gem 'thin'
