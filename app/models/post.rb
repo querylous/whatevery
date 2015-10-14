@@ -5,7 +5,4 @@ class Post < ActiveRecord::Base
   validates :title, presence: { message: "The post needs a title." }
   validates :notes, presence: { message: "This post is about something, right?" } 
 
-  include Slugalicious
-  slugged ->(post) { "#{post.title}" }
-
 end
