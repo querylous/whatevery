@@ -140,8 +140,8 @@ a.editlink:hover {
 /***** style jumbotron *****/
 
 .jumbotron {
-  text-align: center;
-  background-color: $gray;  
+ /*  text-align: center; */
+  background-color: #fff;  
   width: auto;
 }
 
@@ -182,18 +182,18 @@ a.editlink:hover {
 
 /***** style navbar *****/
 
-.navbar-inverse {
-  background-color: $gray;
-  border: none;
-  margin-top: 50px;
-  padding: 10px 0;
+.navbar {
+  background-color: #fff;
+  border-top: 1px solid;
+/*  margin-top: 50px;
+  padding: 10px 0; */
 }
  
-.navbar-inverse .navbar-nav > li > a {
+.navbar .navbar-nav > li > a {
   color: $orange;
 }
 
-.navbar-inverse img {
+.navbar img {
   margin-top: -8px;
   padding-bottom: 0px;
 }

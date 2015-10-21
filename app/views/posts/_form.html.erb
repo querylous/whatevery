@@ -49,7 +49,8 @@
           <%= label_tag(:tweet_this_label, "Tweet this?",
                          class: "col-sm-2 control-label")%>
           <div class="col-sm-10">
-            <%= check_box_tag(:tweet_this) %> 
+            <input name="tweet_this" type="hidden" value="0" />
+            <%= check_box_tag :tweet_this %> 
           </div> 
         </div>
         <div class="form-group">
