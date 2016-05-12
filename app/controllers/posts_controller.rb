@@ -32,7 +32,6 @@ class PostsController < ApplicationController
     if params[:tweet_this] = 1  
       $twitter.update(params[:tweet_msg] + " " + 
                       "http://whatevery.co/posts/#{@post.id}")
-    end
     else
       logger.debug "this will not tweet and tweet_this is #{params[:tweet_this]}"
     end
