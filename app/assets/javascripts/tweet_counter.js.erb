@@ -1,0 +1,9 @@
+$( document  ).ready(function() {
+  var charcount = $("#tweet_msg").val().length;
+  $("#charcount").html(charcount); 
+  $("#tweet_msg").keyup( function () {  
+    charcount = $( "#tweet_msg" ).val().length;
+    $("#charcount").html(charcount); 
+  });
+});
+
